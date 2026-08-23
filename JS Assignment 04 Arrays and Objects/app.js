@@ -100,7 +100,6 @@ var students = [
       atten: true
   }
 ];
-
 var totalMarks = 0;
 for (var i = 0; i < students.length; i++) {
   totalMarks = totalMarks + students[i].marks;
