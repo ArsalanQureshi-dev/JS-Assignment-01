@@ -1,0 +1,153 @@
+/* Modern UI Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .todo-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #taskInput {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        #taskInput:focus {
+            border-color: #007bff;
+        }
+
+        #addTodo {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #addTodo:hover {
+            background-color: #0056b3;
+        }
+
+        #taskList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        /* Task Item Styling */
+        #taskList li {
+            background: #f9f9f9;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #007bff;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        #taskList li:hover {
+            background: #f1f1f1;
+            transform: translateX(auto);
+        }
+
+        /* Delete Button Styling */
+        .del {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .del:hover {
+            background-color: #bd2130;
+        }
+
+        /* Completed Task Style (JavaScript toggles this) */
+        .list-item {
+            text-decoration: line-through;
+            color: #888;
+            opacity: 0.7;
+            border-left-color: #28a745 !important;
+        }
+        .list-item {
+    text-decoration: line-through;
+    opacity: 0.6; 
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Har naye task ke darmiyan gap */
+}
+
+
+ul li span {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+/* Edit aur Delete buttons ke darmiyan gap lane ke liye */
+ul li button {
+    margin-left: 10px; 
+    padding: 5px 10px;  
+    cursor: pointer;
+}
+
+
+ul li button.del {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Edit button ka color (Optional) */
+ul li button.edit {
+    background-color: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
