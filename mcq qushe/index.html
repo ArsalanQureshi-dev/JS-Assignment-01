@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQS Question</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>MCQS Question</h1> <br><br>
+        <p>This is a simple MCQS question.</p>
+    </div>
+    <form id="quiz-form">
+        <div class="list">
+            <p>Q1: What is the capital of France?</p>
+            <ul>
+                <li><input type="radio" name="q1" value="A"> Berlin</li>
+                <li><input type="radio" name="q1" value="B"> Madrid</li>
+                <li><input type="radio" name="q1" value="C"> Paris</li>
+                <li><input type="radio" name="q1" value="D"> Rome</li>
+            </ul>
+        </div>
+        <div class="list">
+            <p>Q2: what is the capital of pakistan?</p>
+            <ul>
+                <li><input type="radio" name="q2" value="A"> Islamabad</li>
+                <li><input type="radio" name="q2" value="B"> Karachi</li>
+                <li><input type="radio" name="q2" value="C"> Lahore</li>
+                <li><input type="radio" name="q2" value="D"> Rawalpindi</li>
+            </ul>
+        </div>
+        <div class="list">
+            <p>Q3: what is the founding year of pakistan?</p>
+            <ul>
+                <li><input type="radio" name="q3" value="A"> 1947</li>
+                <li><input type="radio" name="q3" value="B"> 1950</li>
+                <li><input type="radio" name="q3" value="C"> 1949</li>
+                <li><input type="radio" name="q3" value="D"> 1951</li>
+            </ul>
+        </div>
+        <div class="list">
+            <p>Q4: Who is the founder of Pakistan?</p>
+            <ul>
+                <li><input type="radio" name="q4" value="A"> Muhammad Ali Jinnah</li>
+                <li><input type="radio" name="q4" value="B"> Liaquat Ali Khan</li>
+                <li><input type="radio" name="q4" value="C"> Iskander Mirza</li>
+                <li><input type="radio" name="q4" value="D"> Ayub Khan</li>
+            </ul>
+        </div>
+        <button type="submit">Submit Quiz</button>
+        <p id="score" role="status" aria-live="polite"></p>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
