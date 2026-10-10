@@ -12,7 +12,7 @@ const products = [
 ];
 
 // ================================================================
-//            Part 1: Sort Questions (Easy to Medium)
+        console.log("Part 1: Sort Questions (Easy to Medium)");
 // ================================================================
 
 // 1. Sort products by price (low to high).
@@ -68,6 +68,32 @@ const sortedByRatingAndPrice = products.sort((a, b) => {
 console.log(sortedByRatingAndPrice);
 
 // ================================================================
-//            Part 2: Reduce Questions (Easy to Medium)
+      console.log("Part 2: Reduce Questions (Easy to Medium)");
 // ================================================================
+
+// 1. Calculate the total price of all products.
+
+const totalPrice = products.reduce((acc, product) => acc + product.price, 0);
+console.log(totalPrice);
+
+// 2. Calculate the total quantity of all products.
+
+const totalQuantity = products.reduce((acc, product) => acc + product.quantity, 0);
+console.log(totalQuantity);
+
+// 3. Calculate the average price of all products.
+
+const averagePrice = totalPrice / products.length;
+console.log(averagePrice);
+
+// 4. Find the most expensive product using `reduce()`.
+
+const mostExpensiveProduct = products.reduce((max, product) => (product.price > max.price ? product : max), products[0]);
+console.log(mostExpensiveProduct);
+
+// 5. Find the cheapest product using `reduce()`.
+
+const cheapestProduct = products.reduce((min, product) => (product.price < min.price ? product : min), products[0]);
+console.log(cheapestProduct);
+
 
