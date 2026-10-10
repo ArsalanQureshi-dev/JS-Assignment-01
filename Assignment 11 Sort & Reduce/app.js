@@ -96,4 +96,36 @@ console.log(mostExpensiveProduct);
 const cheapestProduct = products.reduce((min, product) => (product.price < min.price ? product : min), products[0]);
 console.log(cheapestProduct);
 
+// 6. Find the highest-rated product using `reduce()`.
+const highestRatedProduct = products.reduce((max, product) => (product.rating > max.rating ? product : max), products[0]);
+console.log(highestRatedProduct);
 
+// 7. Count how many products have a price greater than Rs. 5,000.
+
+const countProducts = products.reduce((count, product) => (product.price > 5000 ? count + 1 : count), 0);
+
+console.log(countProducts);
+
+// 8. Calculate the total inventory value using `price * quantity`.
+
+const calculateTotal = products.reduce((total, product) => total + product.price * product.quantity, 0);
+console.log(calculateTotal);
+
+// 9. Calculate the total quantity of products with a rating above 4.3.
+
+const totalQuantityRating = products.reduce((total, product) => (product.rating > 4.3 ? total + product.quantity : total), 0);
+console.log(totalQuantityRating);
+
+// 10. Use one `reduce()` to create an object containing:
+// - Total number of products
+// - Total quantity
+// - Total inventory value
+
+const summary = products.reduce((acc, product) => {
+  acc.totalProducts++;
+  acc.totalQuantity += product.quantity;
+  acc.totalInventoryValue += product.price * product.quantity;
+  return acc;
+}, { totalProducts: 0, totalQuantity: 0, totalInventoryValue: 0 });
+
+console.log(summary);
